@@ -511,62 +511,176 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
-.resume .resume-title {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #050d18;
+/*--------------------------------------------------------------
+# Resume (Animated Timeline)
+--------------------------------------------------------------*/
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid #1f5297;
+/* The static grey background line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #e0e0e0;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* The dynamic blue progress line */
+.timeline-progress {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  background: #149ddd;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  height: 0;
+  /* JS will update this */
+  transition: height 0.1s linear;
+  box-shadow: 0 0 10px rgba(20, 157, 221, 0.5);
+  max-height: 100%;
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 40px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+
+.timeline-item.active {
+  opacity: 1;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* The Dot */
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 4px solid #e0e0e0;
+  border-radius: 50%;
+  top: 15px;
+  z-index: 2;
+  transition: all 0.3s;
+}
+
+.timeline-item.left .timeline-dot {
+  right: -10px;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -10px;
+}
+
+.timeline-item.active .timeline-dot {
+  border-color: #149ddd;
+  background: #149ddd;
+  box-shadow: 0 0 15px rgba(20, 157, 221, 0.6);
+  transform: scale(1.3);
+}
+
+/* Content Card */
+.timeline-content {
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s;
   position: relative;
 }
 
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
-  color: #050d18;
-  margin-bottom: 10px;
+.timeline-item.active .timeline-content {
+  transform: translateY(-5px);
+  border-color: #149ddd;
+  box-shadow: 0 10px 25px rgba(20, 157, 221, 0.15);
 }
 
-.resume .resume-item h5 {
+.timeline-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #173b6c;
+  margin-bottom: 5px;
+}
+
+.timeline-content h4 {
   font-size: 16px;
-  background: #e4edf9;
-  padding: 5px 15px;
-  display: inline-block;
   font-weight: 600;
-  margin-bottom: 10px;
+  color: #050d18;
+  margin-bottom: 15px;
 }
 
-.resume .resume-item ul {
+.timeline-content .time-badge {
+  display: inline-block;
+  background: #e4edf9;
+  color: #149ddd;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.timeline-content ul {
   padding-left: 20px;
+  margin-bottom: 0;
+  text-align: left;
+  /* Ensure bullets align correctly even on left items */
 }
 
-.resume .resume-item ul li {
-  padding-bottom: 10px;
+.timeline-content p {
+  margin-bottom: 10px;
+  text-align: left;
 }
 
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
+/* Responsiveness */
+@media (max-width: 768px) {
 
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: #fff;
-  border: 2px solid #1f5297;
+  .timeline-line,
+  .timeline-progress {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: left !important;
+  }
+
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 10px;
+    right: auto;
+  }
+
+  .timeline-item.left .timeline-content {
+    text-align: left;
+  }
 }
 
 /*--------------------------------------------------------------
