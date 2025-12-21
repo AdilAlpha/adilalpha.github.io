@@ -302,7 +302,7 @@ function sendEmail(e) {
   // ----------------------------------------------------
   // PASTE YOUR GOOGLE SCRIPT URL BELOW
   // ----------------------------------------------------
-  const scriptURL = 'REPLACE_THIS_WITH_YOUR_DEPLOYED_GOOGLE_SCRIPT_URL';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwUGYTmW4KsLmB8RNpK-I7e87TQoegDJ3W1qwy_xsZZ3aIFClxDfqu7vletEuj4dOHtbw/exec';
 
   if (scriptURL.includes('REPLACE_THIS')) {
     alert("⚠️ Please setup the Google Script logic first!\n\nCheck the 'google_backend_setup.md' file I created for instructions.");
