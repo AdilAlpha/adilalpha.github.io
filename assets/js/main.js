@@ -286,3 +286,54 @@
   }
 
 })()
+
+/**
+ * Google Apps Script Email Handler
+ */
+function sendEmail(e) {
+  e.preventDefault();
+
+  const form = document.getElementById('contact-form');
+  const loading = document.querySelector('.loading');
+  const errorMsg = document.querySelector('.error-message');
+  const sentMsg = document.querySelector('.sent-message');
+  const button = form.querySelector('button[type="submit"]');
+
+  // ----------------------------------------------------
+  // PASTE YOUR GOOGLE SCRIPT URL BELOW
+  // ----------------------------------------------------
+  const scriptURL = 'REPLACE_THIS_WITH_YOUR_DEPLOYED_GOOGLE_SCRIPT_URL';
+
+  if (scriptURL.includes('REPLACE_THIS')) {
+    alert("⚠️ Please setup the Google Script logic first!\n\nCheck the 'google_backend_setup.md' file I created for instructions.");
+    return;
+  }
+
+  loading.style.display = 'block';
+  errorMsg.style.display = 'none';
+  sentMsg.style.display = 'none';
+  button.disabled = true;
+  button.innerHTML = 'Sending...';
+
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      loading.style.display = 'none';
+      button.innerHTML = 'Send Message';
+      button.disabled = false;
+      if (response.ok) {
+        sentMsg.style.display = 'block';
+        form.reset();
+        setTimeout(() => { sentMsg.style.display = 'none'; }, 5000);
+      } else {
+        throw new Error('Server response not ok');
+      }
+    })
+    .catch(error => {
+      loading.style.display = 'none';
+      button.innerHTML = 'Send Message';
+      button.disabled = false;
+      errorMsg.innerHTML = "Error sending message. Please try again.";
+      errorMsg.style.display = 'block';
+      console.error('Error!', error.message);
+    });
+}

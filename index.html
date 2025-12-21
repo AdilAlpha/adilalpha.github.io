@@ -188,12 +188,11 @@
         <img src="assets/img/Profile_pic.png" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Adil Anwar</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="https://public.tableau.com/app/profile/adil.anwar" target="_blank" class="Tableau"><i
-              class='bx bx-spreadsheet'></i></a>
-          <a href="https://github.com/adilcr01" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://join.skype.com/invite/xIX2dpEPTtsO" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="https://www.linkedin.com/in/anwar-adil" target="_blank" class="linkedin"><i
+          <a href="https://github.com/adilalpha" class="github" target="_blank"><i class="bx bxl-github"></i></a>
+          <a href="https://linkedin.com/in/adil-anwar" class="linkedin" target="_blank"><i
               class="bx bxl-linkedin"></i></a>
+          <a href="https://www.hackerrank.com/adilalpha" class="hackerrank" target="_blank"><i
+              class="bx bx-code-alt"></i></a>
         </div>
       </div>
 
@@ -579,136 +578,171 @@
 
         <div class="section-title">
           <h2>Portfolio</h2>
-          <p>Hi, here are few of the projects that I have worked on ! The full list includes many more project that you
-            can checkout by going to my Github account.!</p>
+          <p>A showcase of my recent work in Artificial Intelligence, Backend Development, and Data Engineering.
+          </p>
         </div>
 
         <div class="row" data-aos="fade-up">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">ML-Projects</li>
-              <li data-filter=".filter-web">Dashboards</li>
+              <li data-filter=".filter-ai">AI / ML</li>
+              <li data-filter=".filter-backend">Backend</li>
+              <li data-filter=".filter-tools">Tools & Scrapers</li>
             </ul>
           </div>
         </div>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Movie.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Movie.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="ML-Projects 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsML1.html" title="More Details"><i class="bx bx-link"></i></a>
+          <!-- Project 1: Thyroid (AI) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+            <div class="portfolio-card">
+              <div class="card-img">
+                <img src="assets/img/portfolio/Thyroid Disease Prediction.jpg" class="img-fluid"
+                  alt="Thyroid Prediction">
+              </div>
+              <div class="card-body">
+                <span class="category">AI / Healthcare</span>
+                <h3>Thyroid Risk Prediction</h3>
+                <p>An ML application utilizing classification algorithms to predict thyroid disease risk with high
+                  accuracy. Deployed on Azure.</p>
+                <div class="tech-stack-mini">
+                  <span>Flask</span><span>Scikit-Learn</span><span>Azure</span>
+                </div>
+                <div class="card-links">
+                  <a href="https://github.com/adilcr01/Thyroid-Disease-Prediction" target="_blank" class="btn-link"><i
+                      class="bx bxl-github"></i> Source</a>
+                  <!-- <a href="#" class="btn-link"><i class="bx bx-link-external"></i> Live</a> -->
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Sales and Profit Dashboard.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Sales and Profit Dashboard.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Dashboard 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsdashboard1.html" title="More Details"><i class="bx bx-link"></i></a>
+          <!-- Project 2: Backend (Backend) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+            <div class="portfolio-card">
+              <div class="card-img"
+                style="background:#2c3e50; min-height:200px; display:flex; align-items:center; justify-content:center;">
+                <i class="bx bx-server" style="font-size:64px; color:#bdc3c7;"></i>
+              </div>
+              <div class="card-body">
+                <span class="category">Backend Architecture</span>
+                <h3>Scalable E-Commerce Core</h3>
+                <p>Designed a robust backend using Django & Celery to handle async tasks, real-time notifications,
+                  and high-load traffic.</p>
+                <div class="tech-stack-mini">
+                  <span>Django</span><span>Celery</span><span>Redis</span>
+                </div>
+                <div class="card-links">
+                  <a href="https://github.com/adilcr01" target="_blank" class="btn-link"><i class="bx bxl-github"></i>
+                    View Code</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Book.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Book.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="ML-Projects 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsML2.html" title="More Details"><i class="bx bx-link"></i></a>
+          <!-- Project 3: Flight Price (AI) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-ai">
+            <div class="portfolio-card">
+              <div class="card-img">
+                <img src="assets/img/portfolio/car.png" class="img-fluid" alt="Flight Price">
+              </div>
+              <div class="card-body">
+                <span class="category">Data Science</span>
+                <h3>Flight Price Prediction</h3>
+                <p>Predictive analytics dashboard that forecasts flight prices based on historical data patterns
+                  and seasonal trends.</p>
+                <div class="tech-stack-mini">
+                  <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+                </div>
+                <div class="card-links">
+                  <a href="https://github.com/adilcr01/Flight-Price-Prediction" target="_blank" class="btn-link"><i
+                      class="bx bxl-github"></i> Source</a>
+                </div>
               </div>
             </div>
           </div>
 
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/retail.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/retail.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="Dashboard 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsdashboard2.html" title="More Details"><i class="bx bx-link"></i></a>
+          <!-- Project 4: Maps Scraper (Tools) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-tools">
+            <div class="portfolio-card">
+              <div class="card-img"
+                style="background:#27ae60; min-height:200px; display:flex; align-items:center; justify-content:center;">
+                <i class="bx bx-map-pin" style="font-size:64px; color:#fff;"></i>
+              </div>
+              <div class="card-body">
+                <span class="category">Automation Tool</span>
+                <h3>Google Maps Scraper</h3>
+                <p>Automated tool utilizing Places API to extract business data, ratings, and reviews, exporting
+                  directly to PostgreSQL.</p>
+                <div class="tech-stack-mini">
+                  <span>Python</span><span>API</span><span>PostgreSQL</span>
+                </div>
+                <div class="card-links">
+                  <a href="https://github.com/adilcr01" target="_blank" class="btn-link"><i class="bx bxl-github"></i>
+                    View Code</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Thyroid Disease Prediction.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Thyroid Disease Prediction.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="ML-Projects 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsML3.html" title="More Details"><i class="bx bx-link"></i></a>
+          <!-- Project 5: Chat App (Backend) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+            <div class="portfolio-card">
+              <div class="card-img"
+                style="background:#8e44ad; min-height:200px; display:flex; align-items:center; justify-content:center;">
+                <i class="bx bx-chat" style="font-size:64px; color:#fff;"></i>
+              </div>
+              <div class="card-body">
+                <span class="category">Real-time Sys</span>
+                <h3>Live Chat Application</h3>
+                <p>Real-time messaging platform built with Django Channels and WebSockets for instant
+                  communication and notifications.</p>
+                <div class="tech-stack-mini">
+                  <span>WebSockets</span><span>Django Channels</span>
+                </div>
+                <div class="card-links">
+                  <a href="https://github.com/adilcr01" target="_blank" class="btn-link"><i class="bx bxl-github"></i>
+                    View Code</a>
+                </div>
               </div>
             </div>
           </div>
 
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Churn Dashboard.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Churn Dashboard.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Dashboard 4"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsdashboard4.html" title="More Details"><i class="bx bx-link"></i></a>
+          <!-- Project 6: OCR Tool (Tools) -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-tools">
+            <div class="portfolio-card">
+              <div class="card-img"
+                style="background:#e67e22; min-height:200px; display:flex; align-items:center; justify-content:center;">
+                <i class="bx bx-scan" style="font-size:64px; color:#fff;"></i>
+              </div>
+              <div class="card-body">
+                <span class="category">Computer Vision</span>
+                <h3>Multi-Lingual OCR</h3>
+                <p>Optical Character Recognition tool for extracting voter details from PDFs in multiple Indian
+                  languages with >90% accuracy.</p>
+                <div class="tech-stack-mini">
+                  <span>OCR</span><span>Python</span><span>OpenCV</span>
+                </div>
+                <div class="card-links">
+                  <a href="https://github.com/adilcr01" target="_blank" class="btn-link"><i class="bx bxl-github"></i>
+                    View Code</a>
+                </div>
               </div>
             </div>
           </div>
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/car.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/car.png" data-gallery="portfolioGallery" class="portfolio-lightbox"
-                  title="ML-Projects 4"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsML4.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Budget Sales Dashboard.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Budget Sales Dashboard.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Dashboard 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsdashboard3.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Ecommerce Sales Dashboard.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Ecommerce Sales Dashboard.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Dashboard 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-detailsdashboard5.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
 
         </div>
 
+        <div class="text-center mt-5">
+          <a href="https://github.com/adilcr01" target="_blank" class="btn btn-primary"
+            style="border-radius: 50px; padding: 10px 30px;">
+            <i class="bx bxl-github"></i> View More on GitHub
+          </a>
+        </div>
+
       </div>
-
-      <center><button class="button1" type="more"><a style="color:#fff;" href="https://github.com/adilcr01"
-            target="_blank">View more on Github</a></button></center>
-
     </section>
     <!-- End Portfolio Section -->
 
@@ -716,79 +750,63 @@
 
 
 
-    <!-- ======= Contact Section ======= -->
+    <!-- ======= Contact Section (Option 3: Floating Deck) ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Feel Free to reach out to me, Will get In touch as soon as possible.</p>
+          <p>Feel free to reach out to me for any project inquiries or collaborations.</p>
         </div>
 
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Rampur, Uttar Pradesh, 244901</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>adilalpha2@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+91 7701922985</p>
-              </div>
-
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d218.5178224906448!2d79.0221245!3d28.8005749!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a92aab678ceb1%3A0xce049378637827fc!2sShahabad%20Gate%20Rd%2C%20Gangapur%20Avas%20Vikas%2C%20Civil%20Lines%2C%20Rampur%2C%20Uttar%20Pradesh%20244901!5e0!3m2!1sen!2sin!4v1646396696143!5m2!1sen!2sin"
-                frameborder="0" style="border:0; width:100%; height: 290px;" allowfullscreen></iframe>
-
-            </div>
-
+        <!-- Contact Info Cards -->
+        <div class="contact-wrapper" data-aos="fade-up">
+          <div class="contact-card">
+            <i class="bi bi-geo-alt"></i>
+            <h3>Location</h3>
+            <p>Rampur, Uttar Pradesh, 244901</p>
           </div>
+          <div class="contact-card">
+            <i class="bi bi-envelope"></i>
+            <h3>Email</h3>
+            <p>adilalpha2@gmail.com</p>
+          </div>
+          <div class="contact-card">
+            <i class="bi bi-phone"></i>
+            <h3>Call</h3>
+            <p>+91 7701922985</p>
+          </div>
+        </div>
 
-          <div class="col-lg-7">
-            <form action="https://formsubmit.co/adilwebsite01@gmail.com" method="POST" role="form"
-              class="contact_email">
+        <!-- Main Form Card -->
+        <div class="contact-wrapper" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-card main-form-card">
+            <h3 class="mb-4">Send a Message</h3>
+            <form id="contact-form" onsubmit="sendEmail(event)">
               <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" placeholder="Name..." class="form-control" id="name" required>
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" placeholder="Email addess..." class="form-control" name="email" id="email"
-                    required>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" placeholder="Email Subject..." class="form-control" name="subject" id="subject"
-                  required>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" placeholder="Questions/Comments..." rows="10"
-                  required></textarea>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
+
               <div class="my-3">
-                <div class="loading">Loading</div>
+                <div class="loading">Sending...</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-              <input type="hidden" name="_autoresponse" value="Thank you for your message">
+
+              <button type="submit">Send Message</button>
             </form>
           </div>
-
         </div>
 
       </div>
