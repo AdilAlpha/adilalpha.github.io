@@ -73,11 +73,11 @@ h6 {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 220px;
+  width: 270px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
   transition: all 0.5s;
-  padding: 0 0 0 15px;
+  padding: 0 15px;
   /* filled right gap, kept left gap */
   background: #2c2f33;
   /* Charcoal Grey */
@@ -137,12 +137,12 @@ h6 {
 }
 
 #main {
-  margin-left: 220px;
+  margin-left: 270px;
 }
 
 @media (max-width: 1199px) {
   #header {
-    left: -220px;
+    left: -270px;
   }
 
   #main {
@@ -187,7 +187,7 @@ h6 {
   transition: 0.3s;
   font-size: 15px;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px 0 0 10px;
+  border-radius: 50px;
   /* Flat right edge */
   width: 100%;
   /* Force full width */
